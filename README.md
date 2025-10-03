@@ -54,3 +54,31 @@ Random Forest performed significantly better than Linear Regression for this dat
 - **Scikit-learn**
 - **Matplotlib, Seaborn**
 
+## 🔥 Model Training & Results
+
+### Baseline Models
+- **Linear Regression**
+  - MSE: `0.80`
+  - R² Score: `0.19` (poor performance, underfitting)
+
+- **Random Forest (default parameters)**
+  - MSE: `0.46`
+  - R² Score: `0.54` (better, but room for improvement)
+
+---
+
+### After Hyperparameter Tuning (Random Forest)
+- **Best Parameters Found (GridSearchCV):**
+  - `n_estimators = 500`
+  - `max_depth = None`
+  - `min_samples_split = 2`
+  - `min_samples_leaf = 1`
+  - `max_features = 'log2'`
+
+- **Performance:**
+  - Best CV R² Score: `0.64`
+  - Test MSE: `0.37`
+  - Test R² Score: `0.63`
+
+✅ The tuned Random Forest significantly outperformed both the baseline linear regression and the untuned Random Forest, proving that **tree-based models with tuning are much better suited for credit risk prediction**.
+
